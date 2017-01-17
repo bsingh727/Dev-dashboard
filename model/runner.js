@@ -38,6 +38,7 @@ module.exports = {
         return status;
     },
     readAllFile: function() {
+      //reading all file in collection input and pass to nemman script
         const folder = './collection/';
         const fs = require('fs');
         var status;
