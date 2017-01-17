@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>
+    {{title}}
+  </h1>
+
+  <!--<button name="checkservice" (click)="check()">Check Service</button>-->
+
+  <br /><br />
+
+  <table *ngIf="values" class="testResults" cellpadding="0" cellspacing="0">
+    <tr>
+      <th>S.No</th>
+      <th>Test case</th>
+      <th>Result</th>
+    </tr>
+    <tr *ngFor="let results of testresult; let i = index;">
+      <td>{{i+1}}</td>
+      <td>{{results.testcase}}</td>
+      <td>
+        <div *ngIf="results.value == true" class="green circle"></div>
+        <div *ngIf="results.value == false" class="red circle"></div>
+      </td>
+    </tr>
+  </table>
+</div>
+
+

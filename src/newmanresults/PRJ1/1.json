@@ -1,0 +1,261 @@
+{
+	"id": "f896caa3-4513-9830-91ab-74207139755c",
+	"name": "R1",
+	"allTests": [],
+	"timestamp": 1483700213859,
+	"collection_id": "b7bdb04d-67a9-db4d-e2db-5ed53e898c4c",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "b7bdb04d-67a9-db4d-e2db-5ed53e898c4c",
+		"name": "R1",
+		"description": "",
+		"order": [
+			"f197bc01-c980-0b47-12a4-cf58bf7e951d"
+		],
+		"folders": [],
+		"requests": [
+			{
+				"id": "f197bc01-c980-0b47-12a4-cf58bf7e951d",
+				"headers": "Content-Type: application/json\n",
+				"url": "http://localhost:1212/getprojectdetails",
+				"preRequestScript": null,
+				"pathVariables": {},
+				"method": "POST",
+				"data": "{\"project_name\":\"PRJ1\"}",
+				"dataMode": "raw",
+				"tests": "tests[\"body contains Project 1\"] = responseBody.has(\"PRJ1\");\ntests[\"body contains Project 2\"] = responseBody.has(\"PRJ2\");\ntests[\"body contains count as numeric\"] = responseBody.has(4321);\ntests[\"body contains collection name Project Details\"] = responseBody.has(\"Project Details\");\ntests[\"body contains count as 1\"] = responseBody.has(1);\ntests[\"body contains count as 2\"] = responseBody.has(2);\ntests[\"body contains uday\"] = responseBody.has(\"uday\");\ntests[\"body contains count as 3\"] = responseBody.has(3);\ntests[\"body contains count as 4\"] = responseBody.has(4);\ntests[\"body contains count as 5\"] = responseBody.has(5);\n\n",
+				"currentHelper": "normal",
+				"helperAttributes": {},
+				"time": 1483700204927,
+				"name": "projectlist",
+				"description": "",
+				"collectionId": "b7bdb04d-67a9-db4d-e2db-5ed53e898c4c",
+				"responses": []
+			}
+		],
+		"timestamp": 1483691348944,
+		"synced": false,
+		"syncedFilename": "",
+		"remote_id": 0,
+		"remoteLink": "",
+		"remoteLinkUpdatedAt": null,
+		"public": false,
+		"owner": "",
+		"subscribed": false,
+		"createdAt": 1483700210146,
+		"updatedAt": null,
+		"write": true,
+		"isDeleted": false,
+		"published": false,
+		"favorite": false,
+		"permissions": {},
+		"syncedPermissions": {}
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [
+		{
+			"key": "echo_digest_realm",
+			"type": "text",
+			"value": "Users",
+			"enabled": true
+		},
+		{
+			"key": "echo_digest_nonce",
+			"type": "text",
+			"value": "Uf2Jm3iFY00YuWGGuOJlnyvql84RZpqx",
+			"enabled": true
+		}
+	],
+	"results": [
+		{
+			"id": "f197bc01-c980-0b47-12a4-cf58bf7e951d",
+			"name": "projectlist",
+			"url": "http://localhost:1212/getprojectdetails",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+			},
+			"tests": {
+				"body contains Project 1": true,
+				"body contains Project 2": true,
+				"body contains count as numeric": false,
+				"body contains collection name Project Details": true,
+				"body contains count as 1": true,
+				"body contains count as 2": true,
+				"body contains uday": false,
+				"body contains count as 3": true,
+				"body contains count as 4": true,
+				"body contains count as 5": true
+			},
+			"testPassFailCounts": {
+				"body contains Project 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body contains Project 2": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body contains count as numeric": {
+					"pass": 0,
+					"fail": 1
+				},
+				"body contains collection name Project Details": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body contains count as 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body contains count as 2": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body contains uday": {
+					"pass": 0,
+					"fail": 1
+				},
+				"body contains count as 3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body contains count as 4": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body contains count as 5": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"body contains Project 1": true,
+					"body contains Project 2": true,
+					"body contains count as numeric": false,
+					"body contains collection name Project Details": true,
+					"body contains count as 1": true,
+					"body contains count as 2": true,
+					"body contains uday": false,
+					"body contains count as 3": true,
+					"body contains count as 4": true,
+					"body contains count as 5": true
+				}
+			],
+			"time": 11,
+			"totalRequestTime": 11,
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 8,
+	"totalFail": 2,
+	"totalTime": 11,
+	"lifecycle": "done",
+	"willStop": false,
+	"requests": [
+		{
+			"name": "projectlist",
+			"id": "f197bc01-c980-0b47-12a4-cf58bf7e951d",
+			"url": "http://localhost:1212/getprojectdetails",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+			},
+			"testPassFailCounts": {
+				"body contains Project 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body contains Project 2": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body contains count as numeric": {
+					"pass": 0,
+					"fail": 1
+				},
+				"body contains collection name Project Details": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body contains count as 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body contains count as 2": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body contains uday": {
+					"pass": 0,
+					"fail": 1
+				},
+				"body contains count as 3": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body contains count as 4": {
+					"pass": 1,
+					"fail": 0
+				},
+				"body contains count as 5": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"gridTitles": [
+				"body contains Project 1",
+				"body contains Project 2",
+				"body contains count as numeric",
+				"body contains collection name Project Details",
+				"body contains count as 1",
+				"body contains count as 2",
+				"body contains uday",
+				"body contains count as 3",
+				"body contains count as 4",
+				"body contains count as 5"
+			],
+			"gridData": [
+				[
+					true,
+					true,
+					false,
+					true,
+					true,
+					true,
+					false,
+					true,
+					true,
+					true
+				]
+			],
+			"tests": {
+				"body contains Project 1": true,
+				"body contains Project 2": true,
+				"body contains count as numeric": false,
+				"body contains collection name Project Details": true,
+				"body contains count as 1": true,
+				"body contains count as 2": true,
+				"body contains uday": false,
+				"body contains count as 3": true,
+				"body contains count as 4": true,
+				"body contains count as 5": true
+			}
+		}
+	],
+	"synced": false
+}
